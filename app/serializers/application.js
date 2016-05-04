@@ -4,5 +4,8 @@ export default JSONAPISerializer.extend({
   primaryKey: '_id',
   keyForAttribute (attr) {
     return attr;
+  },
+  keyForRelationship(key, rel) {
+    return key;
   }
 });

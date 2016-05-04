@@ -23,7 +23,9 @@ export default Model.extend({
   links: attr(),
 
   capital: belongsTo('city'),
-  cities: hasMany('city'),
+  cities: hasMany('city', {
+    inverse: 'country'
+  }),
   regions: hasMany('region'),
   locations: hasMany('location'),
   languagesOfficial: hasMany('language'),
