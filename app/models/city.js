@@ -10,7 +10,7 @@ export default Model.extend({
   position: attr(),
   safetyRating: attr(),
 
-  country: belongsTo('country'),
-  region: belongsTo('region'),
-  locations: hasMany('location')
+  // country: belongsTo('country'),
+  // region: belongsTo('region'),
+  // locations: hasMany('location')
 });

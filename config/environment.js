@@ -29,11 +29,12 @@ module.exports = function(environment) {
     }
   };
 
-  ENV['simple-auth'] = {
-      store: 'simple-auth-session-store:local-storage',
-      authorizer: 'authorizer:custom',
-      crossOriginWhitelist: ['https://murmuring-harbor-61969.herokuapp.com'],
-      routeAfterAuthentication: '/cities'
+  ENV['ember-simple-auth'] = {
+    authenticationRoute: '/login',
+    store: 'simple-auth-session-store:local-storage',
+    authorizer: 'authorizer:custom',
+    crossOriginWhitelist: ['https://murmuring-harbor-61969.herokuapp.com'],
+    routeAfterAuthentication: '/cities'
   };
 
   if (environment === 'development') {

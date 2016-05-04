@@ -2,10 +2,11 @@ import Ember from 'ember';
 import Base from 'ember-simple-auth/authorizers/base';
 
 export default Base.extend({
-    authorize(xhr, requestOptions) {
-        const accessToken = this.get('session.content.secure.token');
+  session: Ember.inject.service(),
+    authorize(sessionData, setHeader) {
+        const accessToken = sessionData.token;
         if (this.get('session.isAuthenticated') && !Ember.isEmpty(accessToken)) {
-            xhr.setRequestHeader('x-access-token', accessToken);
+            setHeader('x-access-token', accessToken);
         }
     }
 });

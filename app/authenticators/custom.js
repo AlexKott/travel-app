@@ -6,7 +6,7 @@ export default Base.extend({
     restore(data) {
         return new Ember.RSVP.Promise( (resolve, reject) => {
             if (!Ember.isEmpty(data.token)) {
-                resolve(data)
+                resolve(data);
             } else {
                 reject();
             }
