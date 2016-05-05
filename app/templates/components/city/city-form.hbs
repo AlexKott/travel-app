@@ -1,4 +1,13 @@
 <label>Name: {{input type="text" value=city.nameEnglish}}</label><br>
 <label>Name (local): {{input type="text" value=city.nameLocal}}</label><br>
-<label>Description: {{input type="text" value=city.description}}</label><br>
+<label>Description: {{textarea value=city.description}}</label><br>
+<label>Public Transport: {{textarea value=city.publicTransport}}</label><br>
+<select onchange={{action "selectCountry" value='target.value'}}>
+  <option value="">Select a country</option>
+  {{#each countries as |country|}}
+    <option value={{country.id}}>
+      {{country.nameEnglish}}
+    </option>
+  {{/each}}
+</select><br>
 <button {{action saveCity city}}>SAVE</button>
