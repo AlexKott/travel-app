@@ -1,0 +1,5 @@
+{{#each countries as |country|}}
+  <li>
+    {{#link-to "country" country}}{{country.nameEnglish}}{{/link-to}}
+  </li>
+{{/each}}

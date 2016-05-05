@@ -14,6 +14,6 @@ export default Model.extend({
     inverse: 'cities',
     async: true
   }),
-  // region: belongsTo('region'),
-  // locations: hasMany('location')
+  region: belongsTo('region'),
+  locations: hasMany('location')
 });

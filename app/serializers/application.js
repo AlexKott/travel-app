@@ -4,7 +4,7 @@ export default JSONAPISerializer.extend({
   keyForAttribute (attr) {
     return attr;
   },
-  keyForRelationship(key, rel) {
+  keyForRelationship(key) {
     return key;
   }
 });
