@@ -1,4 +1,9 @@
-{{country.nameEnglish}}<br>
+Name: {{country.nameEnglish}}<br>
+Name (local): {{country.nameLocal}}<br>
+Description: {{country.description}}<br>
+Cities:
+<ul>
 {{#each country.cities as |city|}}
-  {{city.nameEnglish}}
+  <li>{{#link-to "city" city}}{{city.nameEnglish}}{{/link-to}}</li>
 {{/each}}
+</ul>

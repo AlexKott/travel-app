@@ -16,7 +16,10 @@ Router.map(function() {
     this.route('edit');
   });
 
-  this.route('countries');
+  this.route('countries', function () {
+    this.route('index', { path: '/' });
+    this.route('new');
+  });
   this.route('country', { path: 'countries/:country_id' });
 });
 
