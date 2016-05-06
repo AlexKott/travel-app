@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+// will become a routable component later
 export default Ember.Component.extend({
   store: Ember.inject.service(),
   actions: {
