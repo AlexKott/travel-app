@@ -13,7 +13,11 @@ export default Ember.Component.extend({
         publicTransport: city.publicTransport,
         country: country
       });
-      newCity.save();
+      newCity.save().catch( (err) => {
+        newCity.deleteRecord();
+        this.set('errorMessage', err.errors[0].detail);
+      });
     }
-  }
+  },
+  errorMessage: ''
 });
