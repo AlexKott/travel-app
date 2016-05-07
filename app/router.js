@@ -20,7 +20,9 @@ Router.map(function() {
     this.route('index', { path: '/' });
     this.route('new');
   });
-  this.route('country', { path: 'countries/:country_id' });
+  this.route('country', { path: 'countries/:country_id' }, function () {
+    this.route('edit');
+  });
 });
 
 export default Router;
