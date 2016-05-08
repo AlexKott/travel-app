@@ -11,17 +11,32 @@ Router.map(function() {
   this.route('cities', function () {
     this.route('index', { path: '/' });
     this.route('new');
+    this.route('city', { path: ':city_id' });
   });
-  this.route('city', { path: '/cities/:city_id' }, function () {
-    this.route('edit');
-  });
-
   this.route('countries', function () {
     this.route('index', { path: '/' });
     this.route('new');
+    this.route('country', { path: ':country_id'} );
   });
-  this.route('country', { path: 'countries/:country_id' }, function () {
-    this.route('edit');
+  this.route('currencies', function () {
+    this.route('index', { path: '/' });
+    this.route('new');
+    this.route('currency', { path: ':currency_id'} );
+  });
+  this.route('languages', function () {
+    this.route('index', { path: '/' });
+    this.route('new');
+    this.route('language', { path: ':language_id'} );
+  });
+  this.route('locations', function () {
+    this.route('index', { path: '/' });
+    this.route('new');
+    this.route('location', { path: ':location_id'} );
+  });
+  this.route('regions', function () {
+    this.route('index', { path: '/' });
+    this.route('new');
+    this.route('region', { path: ':region_id'} );
   });
 });
 

@@ -4,6 +4,6 @@ Description: {{country.description}}<br>
 Cities:
 <ul>
 {{#each country.cities as |city|}}
-  <li>{{#link-to "city" city.id}}{{city.nameEnglish}}{{/link-to}}</li>
+  <li>{{#link-to "cities.city" city.id}}{{city.nameEnglish}}{{/link-to}}</li>
 {{/each}}
 </ul>
